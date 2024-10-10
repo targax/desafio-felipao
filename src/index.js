@@ -1,40 +1,48 @@
 
-let nomeHeroi = "Targa"
-let heroiXp = 5000;
-let nivelHeroi = "";
+let herois = [
+    { nome: "Targa", xp: 5000 },
+    { nome: "Felipao", xp: 2500 },
+    { nome: "Jett", xp: 10500 },
+    { nome: "Sage", xp: 7500 }
+];
 
-if(heroiXp < 1000){
+for(let i = 0; i < herois.length; i++){
+    let heroi = herois[i]
+    let nivelHeroi = "";
 
-    nivelHeroi = "Ferro";
+    if(heroi.xp < 1000){
 
-}else if((heroiXp > 1000) && ( heroiXp <= 2000)){
+        nivelHeroi = "Ferro";
 
-    nivelHeroi = "Bronze";
+    }else if((heroi.xp > 1000) && ( heroi.xp <= 2000)){
 
-}else if((heroiXp > 2000) && ( heroiXp <= 5000)){
-    
-    nivelHeroi = "Prata";
+        nivelHeroi = "Bronze";
 
-}else if((heroiXp > 5000) && ( heroiXp <= 7000)){
-    
-    nivelHeroi = "Ouro";
-    
-}else if((heroiXp > 7000) && ( heroiXp <= 8000)){
-    
-    nivelHeroi = "Platina";
+    }else if((heroi.xp > 2000) && ( heroi.xp <= 5000)){
+            
+        nivelHeroi = "Prata";
 
-}else if((heroiXp > 8000) && ( heroiXp <= 9000)){
-    
-    nivelHeroi = "Ascendente";
+     }else if((heroi.xp > 5000) && ( heroi.xp <= 7000)){
+            
+        nivelHeroi = "Ouro";
+            
+    }else if((heroi.xp > 7000) && ( heroi.xp <= 8000)){
+            
+        nivelHeroi = "Platina";
 
-}else if((heroiXp > 9000) && ( heroiXp <= 10000)){
-    
-    nivelHeroi = "Imortal";
+     }else if((heroi.xp > 8000) && ( heroi.xp <= 9000)){
+            
+        nivelHeroi = "Ascendente";
 
-}else if(heroiXp >= 10001 ){
-    
-    nivelHeroi = "Radiante";
+    }else if((heroi.xp > 9000) && ( heroi.xp <= 10000)){
+            
+        nivelHeroi = "Imortal";
 
+    }else if(heroi.xp >= 10001 ){
+            
+        nivelHeroi = "Radiante";
+    }
+
+    console.log("O Herói de nome " + heroi.nome + " está no nível de " + nivelHeroi)
 }
 
-console.log("O Herói de nome " + nomeHeroi + " está no nível de " + nivelHeroi)
